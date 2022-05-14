@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "baseswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nallick/BaseSwift.git",
+      "state" : {
+        "revision" : "3015d03225595f6560813baacd8d92e73412ade8",
+        "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "reflection",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nallick/Reflection.git",
+      "state" : {
+        "revision" : "63265314a0eca5109607e00920c9bc3306cd8433",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "runtime",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wickwirew/Runtime.git",
+      "state" : {
+        "revision" : "dad03135d7701a4e7b3a4051e75d6b37bd8e178e",
+        "version" : "2.2.4"
+      }
+    }
+  ],
+  "version" : 2
+}
