@@ -11,15 +11,19 @@ import UIKit
 open class ApolloSceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let servicesHostProvider: (() -> ServicesHost?)
 
-    public init(servicesHostProvider: (() -> ServicesHost?)? = nil) {
+    public override convenience init() {
+        self.init(servicesHostProvider: nil)
+    }
+
+    public init(servicesHostProvider: (() -> ServicesHost?)?) {
         self.servicesHostProvider = servicesHostProvider ?? { ApolloApplicationDelegate.sharedServicesHost }
     }
 
-    open func sceneWillEnterForeground(_ scene: UIScene) {
+    @objc open func sceneWillEnterForeground(_ scene: UIScene) {
         servicesHostProvider()?.sceneWillEnterForeground(scene)
     }
 
-    open func sceneDidEnterBackground(_ scene: UIScene) {
+    @objc open func sceneDidEnterBackground(_ scene: UIScene) {
         servicesHostProvider()?.sceneDidEnterBackground(scene)
     }
 }
